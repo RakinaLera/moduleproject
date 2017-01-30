@@ -1,3 +1,5 @@
+import org.hibernate.Session;
+
 import javax.ejb.Stateless;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -14,7 +16,13 @@ public class Main implements MainLocal{
     }
 
     public void getDataForSQL(String browserData, String ipClient){
+        System.out.println("Maven + Hibernate + MySQL");
+        Session session = ConnectSQL.getSessionFactory().openSession();
+        session.beginTransaction();
 
+        System.out.println("Browser: " + browserData);
+        System.out.println("IP: " + ipClient);
+
+        session.getTransaction().commit();
     }
-
 }
