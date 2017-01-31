@@ -3,5 +3,5 @@
  */
 public interface MainLocal {
     public String getTime();
-    public void getDataForSQL(String browserData, String ipClient);
+    public void getDataForSQL(String time, String browserData, String ipClient);
 }

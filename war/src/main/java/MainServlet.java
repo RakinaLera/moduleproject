@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet({"/current","/"})
+@WebServlet(urlPatterns = {"/", "/current"})
 public class MainServlet extends HttpServlet {
 
     @EJB
@@ -20,6 +20,9 @@ public class MainServlet extends HttpServlet {
 
         req.setAttribute("time",mainLocal.getTime());
         req.getRequestDispatcher("index.jsp").forward(req,resp);
-        mainLocal.getDataForSQL(req.getParameter("browserType"),req.getParameter("ipClient"));
+        mainLocal.getDataForSQL(
+                req.getParameter("time"),
+                req.getParameter("browserType"),
+                req.getParameter("ipClient"));
     }
 }
