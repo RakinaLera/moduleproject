@@ -1,4 +1,6 @@
 import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -9,18 +11,21 @@ import java.util.Date;
 @Stateless
 public class Main implements MainLocal{
 
+    @PersistenceContext(unitName = "Page")
+    private EntityManager em;
+
     public String getTime (){
         return new SimpleDateFormat("HH:mm:ss").format(new Date());
     }
 
     public void getDataForSQL(String time, String browserData, String ipClient){
-
         Essence essence = new Essence();
-        essence.setTime(time);
+        essence.setTime("09:00:00");
         essence.setBrowser(browserData);
         essence.setIP(ipClient);
-        //Записали в БД
-        Connect service = new Connect();
-        service.add(essence);
+
+        em.getTransaction().begin();
+        em.persist(essence);
+        em.getTransaction().commit();
     }
 }
