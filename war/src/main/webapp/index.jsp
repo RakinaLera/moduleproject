@@ -9,6 +9,8 @@
         <%
             String browserType = request.getHeader("User-Agent");
             String ipClient = request.getRemoteAddr();
+            request.setAttribute("browser",browserType);
+            request.setAttribute("ip",ipClient);
         %>
 
         <h1>

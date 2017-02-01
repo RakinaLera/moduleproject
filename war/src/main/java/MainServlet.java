@@ -18,11 +18,11 @@ public class MainServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
-        req.setAttribute("time",mainLocal.getTime());
+        String time = mainLocal.getTime();
+        req.setAttribute("time",time);
         req.getRequestDispatcher("index.jsp").forward(req,resp);
-        mainLocal.getDataForSQL(
-                req.getParameter("time"),
-                req.getParameter("browserType"),
-                req.getParameter("ipClient"));
+        mainLocal.getDataForSQL(time,
+                req.getAttribute("browser").toString(),
+                req.getAttribute("ip").toString());
     }
 }

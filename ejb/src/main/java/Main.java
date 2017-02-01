@@ -20,7 +20,7 @@ public class Main implements MainLocal{
 
     public void getDataForSQL(String time, String browserData, String ipClient){
         Essence essence = new Essence();
-        essence.setTime("09:00:00");
+        essence.setTime(time);
         essence.setBrowser(browserData);
         essence.setIP(ipClient);
 
