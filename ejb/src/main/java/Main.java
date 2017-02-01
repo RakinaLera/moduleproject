@@ -24,8 +24,6 @@ public class Main implements MainLocal{
         essence.setBrowser(browserData);
         essence.setIP(ipClient);
 
-        em.getTransaction().begin();
         em.persist(essence);
-        em.getTransaction().commit();
     }
 }

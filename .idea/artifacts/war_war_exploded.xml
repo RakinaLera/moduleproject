@@ -10,23 +10,6 @@
           <element id="archive" name="war-1.0-SNAPSHOT.jar">
             <element id="module-output" name="war" />
           </element>
-          <element id="library" level="project" name="Maven: javax:javaee-api:7.0" />
-          <element id="library" level="project" name="Maven: com.sun.mail:javax.mail:1.5.0" />
-          <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
-          <element id="archive" name="ejb-1.0-SNAPSHOT.jar">
-            <element id="module-output" name="ejb" />
-          </element>
-          <element id="library" level="project" name="Maven: org.hibernate:hibernate-entitymanager:4.2.1.Final" />
-          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.1.0.GA" />
-          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:4.2.1.Final" />
-          <element id="library" level="project" name="Maven: antlr:antlr:2.7.7" />
-          <element id="library" level="project" name="Maven: dom4j:dom4j:1.6.1" />
-          <element id="library" level="project" name="Maven: org.jboss.spec.javax.transaction:jboss-transaction-api_1.1_spec:1.0.1.Final" />
-          <element id="library" level="project" name="Maven: org.javassist:javassist:3.15.0-GA" />
-          <element id="library" level="project" name="Maven: org.hibernate.common:hibernate-commons-annotations:4.0.1.Final" />
-          <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final" />
-          <element id="library" level="project" name="Maven: junit:junit:4.11" />
-          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.3" />
         </element>
       </element>
       <element id="directory" name="META-INF">
